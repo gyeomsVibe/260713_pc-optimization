@@ -1,13 +1,23 @@
-# 로컬 Claude 설정 (경로·권한 등 머신 고유 정보)
-.claude/
+# ── Claude Code 도메인 ──
+# 로컬 설정 디렉터리는 제외하되, 공유 대상 설정 파일만 추적 (사용자 결정: 추적함)
+# 주의: git 규칙상 '.claude/'(디렉터리 제외)로는 하위 파일 재포함(!)이 불가.
+#       반드시 '.claude/*'(내용물 제외) 형태여야 아래 부정 규칙이 동작한다.
+.claude/*
+!.claude/settings.local.json
 
-# 머신 고유 백업/로그 (다른 PC에서 무의미, 시스템 상태 노출 방지)
+# ── Antigravity 도메인 ──
+# .agents/ 설정은 호스트명·절대경로·사용자명 등 머신 고유값 포함 → 제외
+# (설정 구조·용도는 notebook/antigravity-agent-environment.md 에 머신값 없이 문서화)
+.agents/config.json
+.agents/mcp_config.json
+
+# ── 머신 고유 백업/로그 (다른 PC에서 무의미, 시스템 상태 노출 방지) ──
 # notebook/, desktop/ 등 어느 하위 폴더의 scratch/ 든 모두 적용
 **/scratch/*.log
 **/scratch/*.pow
 **/scratch/power_backup.json
 **/scratch/scheme_text_backups/
 
-# OS 아티팩트
+# ── OS 아티팩트 ──
 Thumbs.db
 desktop.ini
