@@ -80,6 +80,20 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 | [`optimization_result.md`](optimization_result.md) | 전 단계 적용 결과 및 롤백 방법 (1~4차) |
 | [`claude-agent-environment.md`](claude-agent-environment.md) | 에이전트(Claude/Antigravity) 설정 구성 및 자동 실행 권한 |
 
+## 🤖 Antigravity 에이전트 설정 환경
+
+노트북 환경에서 에이전트(Antigravity)가 정상 작동하는 데 필요한 시스템 기본 사양 및 도구 스택 버전입니다.
+
+- **OS**: Microsoft Windows 11 Enterprise LTSC (Version: 10.0.26100, 64-bit)
+- **Git**: `2.55.0.windows.2`
+- **Node.js**: `v24.18.0`
+- **npm**: `11.16.0`
+- **uv (Python 패키지 관리자)**: `0.11.28`
+- **Python (py 런처)**: `3.14.6`
+
+### 자동 실행 권한 설정 (.claude/settings.local.json)
+에이전트가 사용자 확인(UAC 승인 제외) 없이 안전하게 반복 진단 및 최적화 조회를 수행할 수 있도록 허용된 명령어 패턴 목록은 루트 경로의 [`.claude/settings.local.json`](../.claude/settings.local.json) 파일에 정의되어 관리됩니다.
+
 ---
 
 ## 롤백
