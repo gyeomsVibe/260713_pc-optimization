@@ -1,7 +1,7 @@
 @echo off
 C:\Windows\System32\chcp.com 65001 > nul 2>&1
 echo =========================================================
-echo  Windows Update & MS Store Deep Repair Script
+echo  Windows Update ^& MS Store Deep Repair Script
 echo =========================================================
 echo.
 
@@ -13,7 +13,7 @@ if exist C:\Windows\System32\GroupPolicy\Machine\Registry.pol (
     echo - GPO Registry.pol cache is already clean.
 )
 echo - Forcing Group Policy Update...
-C:\Windows\System32\gpupdate.exe /force >nul 2>&1
+call C:\Windows\System32\gpupdate.exe /force
 echo - Group Policy updated.
 
 echo.
@@ -39,3 +39,5 @@ echo.
 echo =========================================================
 echo Repair commands executed.
 echo =========================================================
+echo.
+pause
