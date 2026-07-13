@@ -2,10 +2,11 @@
 .claude/
 
 # 머신 고유 백업/로그 (다른 PC에서 무의미, 시스템 상태 노출 방지)
-scratch/*.log
-scratch/*.pow
-scratch/power_backup.json
-scratch/scheme_text_backups/
+# notebook/, desktop/ 등 어느 하위 폴더의 scratch/ 든 모두 적용
+**/scratch/*.log
+**/scratch/*.pow
+**/scratch/power_backup.json
+**/scratch/scheme_text_backups/
 
 # OS 아티팩트
 Thumbs.db
