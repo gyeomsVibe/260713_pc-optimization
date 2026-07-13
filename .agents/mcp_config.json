@@ -1,0 +1,31 @@
+{
+    "mcpServers":  {
+                       "cloudrun":  {
+                                        "args":  [
+                                                     "-y",
+                                                     "@google-cloud/cloud-run-mcp"
+                                                 ],
+                                        "command":  "npx"
+                                    },
+                       "notebooks":  {
+                                         "command":  "node",
+                                         "args":  [
+                                                      "c:\\Users\\Kimyoongyeom\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-0.5.2-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+                                                      "notebooks-antigravityide"
+                                                  ]
+                                     },
+                       "visualization":  {
+                                             "command":  "node",
+                                             "args":  [
+                                                          "c:\\Users\\Kimyoongyeom\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-0.5.2-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+                                                          "visualization-antigravityide"
+                                                      ]
+                                         },
+                       "vibe-diagnosis":  {
+                                              "command":  "node",
+                                              "args":  [
+                                                           "D:/D_Workspace_NB/-google-workspace/-antigravity-workspace/260709_vibe-diagnosis/mcp-server/index.js"
+                                                       ]
+                                          }
+                   }
+}

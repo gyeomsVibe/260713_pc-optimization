@@ -10,7 +10,7 @@
 
 ### 1. [💻 노트북 최적화 작업대](notebook/README.md) (`notebook/`)
 - **대상**: MSI GL75 9SDK (Intel i7-9750H / Windows 11 Enterprise LTSC 2024)
-- **주요 내용**: 언더볼팅 분석, 프로세서 상태 및 부스트 조율, LTSC 사용성 복원, 에이전트 자동 실행 권한 연동 및 개발 환경 셋업.
+- **주요 내용**: 언더볼팅 분석, 프로세서 상태 및 부스트 조율, LTSC 사용성 복원, 에이전트 설정(config/MCP) 연동 및 개발 환경 셋업.
 - **바로가기**: [notebook/README.md](notebook/README.md)
 
 ### 2. [🖥️ 데스크톱 최적화 작업대](desktop/README.md) (`desktop/`)

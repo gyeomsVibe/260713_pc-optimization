@@ -70,6 +70,34 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 각 층위의 전체 목록·판단 근거·claude.ai 삭제 절차는 → [`claude-agent-environment.md`](claude-agent-environment.md)
 
 ---
+### 5. Codex 에이전트 환경 구성
+
+Codex는 플러그인마다 상시 프로세스를 띄우기보다, 대화에서 사용할 수 있는
+도구·스킬·지침을 확장한다. 따라서 노트북에서는 **실제 작업에 필요한 기능만
+활성화**해 컨텍스트 토큰과 플러그인 캐시 사용량을 줄였다.
+
+| 구분 | 관리 위치 | 이번 구성 |
+|---|---|---|
+| **로컬 플러그인** | `%USERPROFILE%\.codex\config.toml`, `codex plugin` CLI | 35개 활성 상태를 25개로 정리 |
+| **플러그인 캐시** | `%USERPROFILE%\.codex\plugins\cache` | 중복 Claude 계열 번들을 포함해 약 43MB 절감 |
+| **업무 연동 도구** | Codex Desktop의 연결된 계정·플러그인 | Google Workspace·GitHub·Notion·Zoom 중심으로 유지 |
+
+**정리한 플러그인(10개):**
+
+- Claude API, 중복 문서 스킬, 예제 스킬 묶음
+- Asana, Brand24, Carta CRM, Cloudinary, HeyGen, MarcoPolo, 사설 레지스트리 연동
+
+**유지한 핵심 기능:**
+
+- 개발: GitHub, 코드 리뷰(Code Review), 기능 개발(Feature Development), 커밋, 보안 가이드
+- 문서: 문서·PDF·스프레드시트·프레젠테이션
+- 업무: Gmail, Google Drive, Google Calendar, Notion, Zoom
+- 조작·표현: 내장 브라우저, Chrome 제어, 화면 제어, 사이트 제작, 시각화
+
+> 변경 사항을 완전히 반영하고 이미 메모리에 올라온 도구 정의를 해제하려면
+> Codex Desktop을 종료한 뒤 다시 실행한다. 플러그인 마켓플레이스의 공유 캐시는
+> 재설치·업데이트용이므로, 설치 목록에 없는 항목까지 수동 삭제하지 않는다.
+
 
 ## 문서
 
@@ -78,7 +106,7 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 | [`implementation_plan.md`](implementation_plan.md) | 초기 발열·지연 방지 최적화 계획서 |
 | [`throttlestop_report.md`](throttlestop_report.md) | ThrottleStop 현재 설정 분석 (Read-only 조사) |
 | [`optimization_result.md`](optimization_result.md) | 전 단계 적용 결과 및 롤백 방법 (1~4차) |
-| [`claude-agent-environment.md`](claude-agent-environment.md) | 에이전트(Claude/Antigravity) 설정 구성 및 자동 실행 권한 |
+| [`claude-agent-environment.md`](claude-agent-environment.md) | Claude Code 에이전트 설정 구성 및 정리 가이드 |
 
 ## 🤖 Antigravity 에이전트 설정 환경
 
@@ -91,8 +119,8 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 - **uv (Python 패키지 관리자)**: `0.11.28`
 - **Python (py 런처)**: `3.14.6`
 
-### 자동 실행 권한 설정 (.claude/settings.local.json)
-에이전트가 사용자 확인(UAC 승인 제외) 없이 안전하게 반복 진단 및 최적화 조회를 수행할 수 있도록 허용된 명령어 패턴 목록은 루트 경로의 [`.claude/settings.local.json`](../.claude/settings.local.json) 파일에 정의되어 관리됩니다.
+### 에이전트 환경설정 (.agents/)
+에이전트(Antigravity)의 사용자 설정 및 MCP 서버 구성을 보존하기 위해 루트 경로의 [`.agents/config.json`](../.agents/config.json) 및 [`.agents/mcp_config.json`](../.agents/mcp_config.json) 파일이 리포지토리에 저장되어 함께 동기화됩니다.
 
 ---
 
