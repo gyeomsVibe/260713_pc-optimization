@@ -1,0 +1,12 @@
+# 로컬 Claude 설정 (경로·권한 등 머신 고유 정보)
+.claude/
+
+# 머신 고유 백업/로그 (다른 PC에서 무의미, 시스템 상태 노출 방지)
+scratch/*.log
+scratch/*.pow
+scratch/power_backup.json
+scratch/scheme_text_backups/
+
+# OS 아티팩트
+Thumbs.db
+desktop.ini
