@@ -43,7 +43,7 @@
 
 ## 4. Proposed Changes (변경 예정 사항)
 
-#### [NEW] [cpu_boost_optimizer.ps1](file:///d:/D_Workspace_NB/-google-workspace/-antigravity-workspace/260705_AI_위치안내_8주차/scratch/cpu_boost_optimizer.ps1)
+#### [NEW] [cpu_boost_optimizer.ps1](scratch/cpu_boost_optimizer.ps1)
 - 안전 시뮬레이션 및 실제 값 적용 기능을 담당할 복구 가능한 스크립트 파일 생성.
 
 ---
