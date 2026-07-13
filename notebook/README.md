@@ -43,11 +43,13 @@ Windows 전원 스킴만 조율했다.
 | uv / npm / pip | 최신 확인 |
 | 신규 설치 | GitHub CLI, ripgrep |
 
+*에이전트의 원활한 동작을 위해 명령어 자동 실행 권한([`.claude/settings.local.json`](../.claude/settings.local.json)) 설정이 함께 연동되어 보존됩니다.*
+
 ### 3. LTSC → Pro급 사용성 복원
 LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `msstore`)로 복원.
 
 - Microsoft Store 복원
-- 인박스 앱 10종: 계산기, 메모장, 캡처 도구, 그림판, Windows Terminal, Photos, HEIF/VP9/WebP/RAW 코덱
+- Inbox 앱 10종: 계산기, 메모장, 캡처 도구, 그림판, Windows Terminal, Photos, HEIF/VP9/WebP/RAW 코덱
 
 ---
 
@@ -58,6 +60,7 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 | [`implementation_plan.md`](implementation_plan.md) | 초기 발열·지연 방지 최적화 계획서 |
 | [`throttlestop_report.md`](throttlestop_report.md) | ThrottleStop 현재 설정 분석 (Read-only 조사) |
 | [`optimization_result.md`](optimization_result.md) | 전 단계 적용 결과 및 롤백 방법 (1~4차) |
+| [`agent_env_config.md`](agent_env_config.md) | 에이전트 개발 도구 버전 및 자동 실행 권한 설정 내역 |
 
 ---
 

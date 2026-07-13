@@ -71,7 +71,8 @@
       "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(list\\(d.keys\\(\\)\\) if isinstance\\(d,dict\\) else d, ensure_ascii=False, indent=1\\)\\)\")",
       "Bash(CFG=\"$HOME/.claude.json\"; echo \"== .claude.json 크기 ==\"; ls -la \"$CFG\" 2>/dev/null | awk '{print $5, $9}'; echo \"\"; echo \"== enabledPlugins 블록 ==\"; python -c \" *)",
       "Bash(python -c ' *)",
-      "Bash(echo \"- [Claude 플러그인 구성]\\(claude-plugins-config.md\\) — 로컬 10개 중 3개 비활성화, 비즈니스 커넥터 번들은 claude.ai에서 정리 필요\" >> \"/c/Users/Kimyoongyeom/.claude/projects/D--D-Workspace-NB--google-workspace--antigravity-workspace-260713-notebook-PC-------/memory/MEMORY.md\")"
+      "Bash(echo \"- [Claude 플러그인 구성]\\(claude-plugins-config.md\\) — 로컬 10개 중 3개 비활성화, 비즈니스 커넥터 번들은 claude.ai에서 정리 필요\" >> \"/c/Users/Kimyoongyeom/.claude/projects/D--D-Workspace-NB--google-workspace--antigravity-workspace-260713-notebook-PC-------/memory/MEMORY.md\")",
+      "Bash(echo \"== ~/.claude 및 하위에서 'bio-research' 참조 파일 ==\"; grep -rl \"bio-research\" ~/.claude 2>/dev/null | grep -v -E 'projects/|history|cache/|shell-snapshot' | head; echo \"\"; echo \"== 'anthropic-skills' 또는 번들 마켓플레이스 참조 ==\"; grep -rl -E \"small-business|enterprise-search|human-resources\" ~/.claude 2>/dev/null | grep -v -E 'projects/|history|shell-snapshot' | head; echo \"\"; echo \"== managed-settings / policy 파일 존재? ==\"; ls -la ~/.claude/managed-settings.json ~/.claude/policies* 2>&1 | head; ls \"C:/ProgramData/ClaudeCode/\" 2>&1 | head)"
     ]
   }
 }
