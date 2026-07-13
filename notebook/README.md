@@ -51,6 +51,24 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 - Microsoft Store 복원
 - Inbox 앱 10종: 계산기, 메모장, 캡처 도구, 그림판, Windows Terminal, Photos, HEIF/VP9/WebP/RAW 코덱
 
+### 4. Claude Code 에이전트 환경 구성 (학습모드)
+
+에이전트 도구의 "확장"은 **3개 층위**로 나뉜다. 이 구분을 알아야 *무엇을 어디서 켜고 끄는지* 헷갈리지 않는다.
+
+| 층위 | 무엇인가 | 관리 위치 | 리소스 성격 |
+|---|---|---|---|
+| **① 로컬 플러그인** | 마켓플레이스에서 로컬 설치한 스킬·명령·에이전트 묶음 | `claude plugin` CLI (에이전트가 직접 제어) | 컨텍스트 토큰 |
+| **② 로컬 MCP 서버** | 로컬 설정에 등록된 외부 도구 서버 | `claude mcp` / `/mcp` | 프로세스·연결 |
+| **③ 계정 커넥터 번들** | claude.ai 계정에 연결되어 로그인 시 주입되는 업무용 번들 | **claude.ai 웹 설정에서만** | 목록·연결시도 오버헤드 |
+
+> 핵심 원리: **①②는 이 노트북 로컬에서 제어**되지만, **③은 claude.ai 계정 쪽**에 있어 CLI로 못 지운다.
+
+**이번에 적용한 정리:**
+- **① 로컬 플러그인**: 설치된 10개 중 불필요·중복 **3개 비활성화**(`plugin-dev`, `example-skills`, `pr-review-toolkit`) → 활성 7개 유지. `disable`은 컨텍스트 미로딩 = 리소스 절약이며 가역적(`claude plugin enable`로 원복).
+- **② 로컬 MCP**: Notion(연결) / Canva(인증 필요) 상태 확인.
+- **③ 계정 커넥터 15종**: 전부 사용 0회. bio-research·legal·marketing 등 **업무용 번들 11개는 삭제 권장**이나, 계정 쪽 설정이라 claude.ai 웹에서 직접 제거해야 함.
+각 층위의 전체 목록·판단 근거·claude.ai 삭제 절차는 → [`claude-agent-environment.md`](claude-agent-environment.md)
+
 ---
 
 ## 문서
@@ -60,7 +78,7 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 | [`implementation_plan.md`](implementation_plan.md) | 초기 발열·지연 방지 최적화 계획서 |
 | [`throttlestop_report.md`](throttlestop_report.md) | ThrottleStop 현재 설정 분석 (Read-only 조사) |
 | [`optimization_result.md`](optimization_result.md) | 전 단계 적용 결과 및 롤백 방법 (1~4차) |
-| [`agent_env_config.md`](agent_env_config.md) | 에이전트 개발 도구 버전 및 자동 실행 권한 설정 내역 |
+| [`claude-agent-environment.md`](claude-agent-environment.md) | 에이전트(Claude/Antigravity) 설정 구성 및 자동 실행 권한 |
 
 ---
 

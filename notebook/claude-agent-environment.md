@@ -119,7 +119,23 @@ claude        # 대화형 실행
 
 ---
 
-## 5. 관련 기록
+## 5. 에이전트 개발 도구 스택 & 자동 실행 권한
+
+노트북 환경에서 에이전트(Antigravity)가 정상 작동하는 데 필요한 시스템 기본 사양 및 도구 스택 버전입니다.
+
+- **OS**: Microsoft Windows 11 Enterprise LTSC (Version: 10.0.26100, 64-bit)
+- **Git**: `2.55.0.windows.2`
+- **Node.js**: `v24.18.0`
+- **npm**: `11.16.0`
+- **uv (Python 패키지 관리자)**: `0.11.28`
+- **Python**: `3.14.6`
+
+### 자동 실행 권한 설정 (.claude/settings.local.json)
+안전한 조회 및 자동 테스트를 수행하기 위해 허용된 명령어 패턴 목록은 루트 경로의 [`.claude/settings.local.json`](../.claude/settings.local.json) 파일에 정의되어 관리됩니다.
+
+---
+
+## 6. 관련 기록
 - 개발 스택(파이썬·노드·git 등): [`optimization_result.md`](optimization_result.md) 3차 섹션
 - 전원/발열 최적화: [`optimization_result.md`](optimization_result.md), [`scratch/cpu_boost_optimizer.ps1`](scratch/cpu_boost_optimizer.ps1)
 - 상위 통합 개요: [`../README.md`](../README.md)
