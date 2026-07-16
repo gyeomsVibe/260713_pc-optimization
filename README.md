@@ -18,6 +18,11 @@
 - **주요 내용**: 고성능 연산 환경 및 AI 개발 환경 최적화, 발열 및 오버클러킹/언더볼팅 조율 계획 수립.
 - **바로가기**: [desktop/README.md](desktop/README.md)
 
+### 3. [🐾 나만의 반려동물 캐릭터 만들기](custom-pet-guide/README.md) (`custom-pet-guide/`)
+- **목적**: 캐릭터 스프라이트를 빠르고 재현 가능하게 제작·교정·검증하는 실전 절차를 제공합니다.
+- **주요 내용**: 입력 정본 고정, 캐릭터 정체성 계약, 행 단위 교체, 크기 정규화, 실패 사례, 설치 전후 검증.
+- **바로가기**: [custom-pet-guide/README.md](custom-pet-guide/README.md)
+
 ---
 
 ## 🛠️ 공통 최적화 원칙
@@ -55,4 +60,3 @@
 - **해결책**: 탐색기 프로세스 킬 스크립트에 프로세스를 백그라운드로 안전하게 가동하는 **`Start-Process explorer.exe`** 코드를 동시 가동하는 안전장치를 설치하여 즉시 자동 복구되도록 처리.
 
 *자세한 작업 관리 및 검증 내역은 [optimization_result.md](notebook/00_Project_Management/optimization_result.md) 문서에서 추적 가능합니다.*
-

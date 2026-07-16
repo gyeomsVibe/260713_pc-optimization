@@ -1,0 +1,21 @@
+{
+  "name": "my-pet",
+  "canonicalReferences": [
+    "references/front.png",
+    "references/expressions.png",
+    "references/turnaround.png"
+  ],
+  "identityLock": {
+    "hair": "Describe shape, part, length, and color",
+    "face": "Describe stable facial features",
+    "top": "Describe exact garment construction and colors",
+    "pants": "Describe exact color",
+    "shoes": "Describe exact color and form"
+  },
+  "forbiddenChanges": [
+    "Do not add a hood or zipper",
+    "Do not change pants color between motions",
+    "Do not change apparent character scale between rows"
+  ],
+  "spriteVersionNumber": 2
+}
