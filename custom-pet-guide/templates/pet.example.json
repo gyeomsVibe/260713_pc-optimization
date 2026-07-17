@@ -1,7 +1,0 @@
-{
-  "id": "my-pet",
-  "displayName": "My Pet",
-  "description": "A short description of the companion.",
-  "spriteVersionNumber": 2,
-  "spritesheetPath": "spritesheet.webp"
-}

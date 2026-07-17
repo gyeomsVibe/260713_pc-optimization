@@ -18,10 +18,10 @@
 - **주요 내용**: 고성능 연산 환경 및 AI 개발 환경 최적화, 발열 및 오버클러킹/언더볼팅 조율 계획 수립.
 - **바로가기**: [desktop/README.md](desktop/README.md)
 
-### 3. [🐾 나만의 반려동물 캐릭터 만들기](custom-pet-guide/README.md) (`custom-pet-guide/`)
-- **목적**: 캐릭터 스프라이트를 빠르고 재현 가능하게 제작·교정·검증하는 실전 절차를 제공합니다.
-- **주요 내용**: 입력 정본 고정, 캐릭터 정체성 계약, 행 단위 교체, 크기 정규화, 실패 사례, 설치 전후 검증.
-- **바로가기**: [custom-pet-guide/README.md](custom-pet-guide/README.md)
+### 3. [🐾 나만의 커스텀 반려동물(Pet) 만들기](custom-pet-manual/README.md) (`custom-pet-manual/`)
+- **목적**: 내 캐릭터를 Codex 반려동물로 만들고 설치하는 초보자용 실전 매뉴얼입니다.
+- **주요 내용**: 기준 이미지 고정, 13개 제작 작업의 올바른 순서, 크기·색·방향·테두리 오류 방지, 설치와 복구, 실제 실패 사례.
+- **바로가기**: [custom-pet-manual/README.md](custom-pet-manual/README.md)
 
 ---
 
