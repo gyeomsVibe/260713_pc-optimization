@@ -16,6 +16,7 @@
 **/scratch/*.log
 **/scratch/*.pow
 **/scratch/power_backup.json
+**/scratch/*-backup-*.json
 **/scratch/scheme_text_backups/
 
 # ── scratch에 추출된 Antigravity/Electron 앱 런타임 바이너리 덤프 (커밋 금지) ──
