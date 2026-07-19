@@ -15,19 +15,9 @@ MSI GL75 9SDK 노트북의 발열·성능·개발 도구·AI 에이전트 환경
 
 ## AI 에이전트 환경
 
-세 에이전트는 비슷한 기능을 제공하지만, 설정 위치와 권한 모델이 다릅니다.
-한 에이전트는 다른 에이전트의 설정을 수정하지 않습니다.
+에이전트별 환경 설정·글로벌 룰은 **플랫폼 저장소에서 단일 관리**합니다(위 문서 구조 표 참조). 본 저장소는 PC 하드웨어·전원·디스크·OS 최적화만 다룹니다.
 
-| 에이전트 | 전용 문서 | 관리 범위 |
-|---|---|---|
-| Claude Code | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/claude/environment-notebook.md) | `.claude/`, 로컬 플러그인·MCP, 계정 커넥터 |
-| Codex | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/codex/environment-notebook.md) | `~/.codex/`, Codex 플러그인, Desktop 연동 |
-| Antigravity | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/antigravity/environment-notebook.md) | `.agents/`, IDE 확장, 로컬 MCP |
-
-공통 규칙 정본과 동기화 방법은
-[글로벌 룰 영문 정본](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/tree/main/shared/global-rules)에서 관리하고,
-설계 근거와 적용 결과는
-[글로벌 룰 작성 계획서](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/shared/global-rules-writing-plan.md)에 기록합니다.
+→ [gyeomsVibe/260718_agentic-ai-platform-optimization](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization)
 
 ## 안전 원칙
 

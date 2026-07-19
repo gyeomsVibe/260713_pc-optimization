@@ -51,30 +51,11 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 
 ---
 
-## 에이전트 환경 (학습모드)
+## 에이전트 환경
 
-이 노트북은 **세 개의 AI 에이전트**(Claude Code · Codex · Antigravity)를 함께 사용한다.
-설정이 서로 뒤섞이지 않도록, **각 에이전트는 자기 전용 문서에서 자기 환경만** 관리한다.
+이 노트북의 AI 에이전트(Claude Code·Codex·Antigravity) 환경 설정, 3층위 관리 개념, 도메인 격리 원칙, 글로벌 룰은 **플랫폼 저장소로 이관**되어 그곳에서 단일 관리한다. 본 PC 최적화 저장소는 하드웨어·전원·디스크·OS 최적화만 다룬다.
 
-### 공통 개념 — 에이전트 "확장"의 3층위
-어떤 에이전트든 확장은 아래 3층위로 나뉜다. 이 구분을 알아야 *무엇을 어디서 켜고 끄는지* 헷갈리지 않는다.
-
-| 층위 | 무엇인가 | 관리 위치 | 리소스 성격 |
-|---|---|---|---|
-| **① 로컬 플러그인** | 로컬에 설치한 스킬·명령·에이전트 묶음 | 각 에이전트 CLI (직접 제어) | 컨텍스트 토큰 |
-| **② 로컬 MCP 서버** | 로컬 설정에 등록된 외부 도구 서버 | 각 에이전트 CLI / `/mcp` | 프로세스·연결 |
-| **③ 계정 커넥터 번들** | 계정에 연결되어 로그인 시 주입되는 업무용 번들 | **각 서비스 웹 설정에서만** | 목록·연결시도 오버헤드 |
-
-> 핵심 원리: **①②는 이 노트북 로컬**에서 제어되지만, **③은 계정 쪽**에 있어 로컬 CLI로 못 지운다.
-
-### 에이전트별 전용 문서
-| 에이전트 | 전용 문서 | 관리 도메인(건드리는 위치) |
-|---|---|---|
-| **Claude Code** | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/claude/environment-notebook.md) | `.claude/` · `claude plugin` / `claude mcp` |
-| **Codex** | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/codex/environment-notebook.md) | `~/.codex/` · `codex plugin` |
-| **Antigravity** | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/antigravity/environment-notebook.md) | `.agents/` · IDE 확장 프로그램 |
-
-> **도메인 격리 원칙**: 한 에이전트는 **다른 에이전트의 설정 파일**(`.claude/`, `~/.codex/`, `.agents/`)을 수정하지 않는다. 각 문서는 해당 에이전트의 환경만 다룬다.
+→ [gyeomsVibe/260718_agentic-ai-platform-optimization](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization)
 
 ---
 
