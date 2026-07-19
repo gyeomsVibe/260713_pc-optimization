@@ -18,6 +18,21 @@
 **/scratch/power_backup.json
 **/scratch/scheme_text_backups/
 
+# ── scratch에 추출된 Antigravity/Electron 앱 런타임 바이너리 덤프 (커밋 금지) ──
+# 조사용으로 풀어놓은 앱 바이너리(수백 MB). 소스가 아니므로 저장소에 넣지 않는다.
+# .ps1/.bat/.md 최적화 스크립트·문서는 계속 추적한다.
+**/scratch/*.exe
+**/scratch/*.dll
+**/scratch/*.pak
+**/scratch/*.dat
+**/scratch/*.bin
+**/scratch/*.html
+**/scratch/LICENSE*.txt
+**/scratch/all_menus.txt
+**/scratch/vk_swiftshader_icd.json
+**/scratch/locales/
+**/scratch/resources/
+
 # ── 커스텀 Pet 개인 자산 (캐릭터 원본·임시 스프라이트·검수 이미지·핸드오프 로그) ──
 # 공개 저장소에는 custom-pet-manual/의 익명화 문서만 올린다. 개인 자산은 전부 제외.
 gyeom-pet-generation-references/
