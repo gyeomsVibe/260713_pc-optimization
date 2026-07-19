@@ -53,7 +53,7 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 
 ## 에이전트 환경
 
-이 노트북의 AI 에이전트(Claude Code·Codex·Antigravity) 환경 설정, 3층위 관리 개념, 도메인 격리 원칙, 글로벌 룰은 **플랫폼 저장소로 이관**되어 그곳에서 단일 관리한다. 본 PC 최적화 저장소는 하드웨어·전원·디스크·OS 최적화만 다룬다.
+이 노트북의 AI 에이전트(Claude Code·Codex·Antigravity) 환경 설정과 운영 규칙은 **플랫폼 저장소로 이관**되어 그곳에서 단일 관리한다. 본 PC 최적화 저장소는 하드웨어·전원·디스크·OS 최적화만 다룬다.
 
 → [gyeomsVibe/260718_agentic-ai-platform-optimization](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization)
 
