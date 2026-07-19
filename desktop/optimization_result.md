@@ -39,7 +39,39 @@
 
 ---
 
-## 4. 롤백 (Rollback) 가이드
+## 4. CPU 성능 가속화 및 OS 반응성 튜닝 결과 (원격 저장소 이식 완료)
+
+### ① CPU 가속 모드 튜닝 (Performance Boost Mode)
+- **설정 변경**: 고성능 프로필(`8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c`)의 프로세서 성능 강화 모드를 `Aggressive`로 활성화 및 정책 갱신.
+- **검증 쿼리 결과**:
+  ```text
+  > reg query HKLM\System\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\be337238-0d82-4146-a960-4f3749d470c7 /v Attributes
+    Attributes    REG_DWORD    0x2
+  ```
+
+### ② 탐색기 반응성 개선 (Explorer Responsiveness)
+- **설정 변경**: 탐색기 기동 폴더를 "내 PC(This PC)"로 강제하고, 별도 프로세스 다중 생성 구조를 비활성화하여 단일 프로세스 구조로 통합.
+- **검증 쿼리 결과**:
+  ```text
+  > reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v LaunchTo
+    LaunchTo    REG_DWORD    0x2
+  > reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v SeparateProcess
+    SeparateProcess    REG_DWORD    0x0
+  ```
+
+### ③ 우클릭 메뉴 렉 제거 및 전역 폴더 뷰 정렬 최적화
+- **설정 변경**: Bing Wallpaper 쉘 확장 차단, 신규 컨텍스트 메뉴 CLSID 복구, ShellBags 정돈, 6대 라이브러리 폴더 뷰 모드(자세히 보기, 유형 그룹, 이름 정렬) 및 `#Folder` 명칭 강제 주입.
+- **검증 쿼리 결과**:
+  ```text
+  > reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v {15589FA6-768B-4826-97B8-D12DE265B3BB}
+    {15589FA6-768B-4826-97B8-D12DE265B3BB}    REG_SZ    Bing Wallpaper Desktop Context Menu
+  > reg query HKCU\Software\Classes\Directory /ve
+    (Default)    REG_SZ    #Folder
+  ```
+
+---
+
+## 5. 롤백 (Rollback) 가이드
 최적화 조치들을 복구하고 시스템을 최초 기본값으로 되돌리고 싶으신 경우, 아래의 수동 복구 배치 스크립트를 관리자 권한으로 실행하시기 바랍니다.
 
 - **복구 스크립트 위치**: [rollback_optimization.bat](scratch/rollback_optimization.bat) (또는 `d:\D_Workspace_PC\-Google_Workspace\-Antigravity_Workspace\260713_desktop-optimization\desktop\scratch\rollback_optimization.bat`)
