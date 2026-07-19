@@ -32,7 +32,7 @@ Windows 전원 스킴만 조율했다.
 - 페이지파일 `C: 고정 8192MB` (자동관리 해제)
 - 미사용 전원 스킴 4개 정리, Microsoft PC Manager 제거
 
-→ [`scratch/cpu_boost_optimizer.ps1`](scratch/cpu_boost_optimizer.ps1) (`-DryRun` / `-Apply` / `-Rollback` 지원)
+→ [`cpu_boost_optimizer.ps1`](../scratch/cpu_boost_optimizer.ps1) (`-DryRun` / `-Apply` / `-Rollback` 지원)
 
 ### 2. 개발 스택 최신화 (2026-07 기준)
 | 도구 | 버전 |
@@ -70,9 +70,9 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 ### 에이전트별 전용 문서
 | 에이전트 | 전용 문서 | 관리 도메인(건드리는 위치) |
 |---|---|---|
-| **Claude Code** | [`claude-agent-environment.md`](claude-agent-environment.md) | `.claude/` · `claude plugin` / `claude mcp` |
-| **Codex** | [`codex-agent-environment.md`](codex-agent-environment.md) | `~/.codex/` · `codex plugin` |
-| **Antigravity** | [`antigravity-agent-environment.md`](antigravity-agent-environment.md) | `.agents/` · IDE 확장 프로그램 |
+| **Claude Code** | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/claude/environment-notebook.md) | `.claude/` · `claude plugin` / `claude mcp` |
+| **Codex** | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/codex/environment-notebook.md) | `~/.codex/` · `codex plugin` |
+| **Antigravity** | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/antigravity/environment-notebook.md) | `.agents/` · IDE 확장 프로그램 |
 
 > **도메인 격리 원칙**: 한 에이전트는 **다른 에이전트의 설정 파일**(`.claude/`, `~/.codex/`, `.agents/`)을 수정하지 않는다. 각 문서는 해당 에이전트의 환경만 다룬다.
 
@@ -83,7 +83,7 @@ LTSC에서 누락된 구성 요소를 **정품 경로**(`wsreset -i` + winget `m
 | 파일 | 내용 |
 |---|---|
 | [`implementation_plan.md`](implementation_plan.md) | 초기 발열·지연 방지 최적화 계획서 |
-| [`throttlestop_report.md`](throttlestop_report.md) | ThrottleStop 현재 설정 분석 (Read-only 조사) |
+| [`throttlestop_report.md`](../02_Hardware_Optimization/throttlestop_report.md) | ThrottleStop 현재 설정 분석 (Read-only 조사) |
 | [`optimization_result.md`](optimization_result.md) | 전 단계 적용 결과 및 롤백 방법 (1~4차) |
 
 에이전트 환경 문서는 위 **[에이전트 환경](#에이전트-환경-학습모드)** 절의 전용 문서 표를 참조.

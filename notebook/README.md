@@ -11,7 +11,7 @@ MSI GL75 9SDK 노트북의 발열·성능·개발 도구·AI 에이전트 환경
 | 프로젝트 관리 | 전체 최적화 내역, 적용 결과, 롤백 절차 | [00_Project_Management](00_Project_Management/README.md) |
 | 디스크 최적화 | 저장소 정리와 IDE 경량화 기록 | [01_Disk_Optimization](01_Disk_Optimization/) |
 | 하드웨어 최적화 | GPU·전원·발열 분석 자료 | [02_Hardware_Optimization](02_Hardware_Optimization/) |
-| 에이전트 환경 | Claude Code·Codex·Antigravity 전용 설정 문서 | [03_Agent_Environments](03_Agent_Environments/) |
+| 에이전트 환경 | Claude Code·Codex·Antigravity 전용 설정 문서 | [플랫폼 최적화 저장소](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization) |
 
 ## AI 에이전트 환경
 
@@ -20,14 +20,14 @@ MSI GL75 9SDK 노트북의 발열·성능·개발 도구·AI 에이전트 환경
 
 | 에이전트 | 전용 문서 | 관리 범위 |
 |---|---|---|
-| Claude Code | [환경 기록](03_Agent_Environments/claude-agent-environment.md) | `.claude/`, 로컬 플러그인·MCP, 계정 커넥터 |
-| Codex | [환경 기록](03_Agent_Environments/codex-agent-environment.md) | `~/.codex/`, Codex 플러그인, Desktop 연동 |
-| Antigravity | [환경 기록](03_Agent_Environments/antigravity-agent-environment.md) | `.agents/`, IDE 확장, 로컬 MCP |
+| Claude Code | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/claude/environment-notebook.md) | `.claude/`, 로컬 플러그인·MCP, 계정 커넥터 |
+| Codex | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/codex/environment-notebook.md) | `~/.codex/`, Codex 플러그인, Desktop 연동 |
+| Antigravity | [환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/antigravity/environment-notebook.md) | `.agents/`, IDE 확장, 로컬 MCP |
 
 공통 규칙 정본과 동기화 방법은
-[글로벌 룰 영문 정본](03_Agent_Environments/global-rules/README.md)에서 관리하고,
+[글로벌 룰 영문 정본](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/tree/main/shared/global-rules)에서 관리하고,
 설계 근거와 적용 결과는
-[글로벌 룰 작성 계획서](03_Agent_Environments/global-rules-writing-plan.md)에 기록합니다.
+[글로벌 룰 작성 계획서](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/shared/global-rules-writing-plan.md)에 기록합니다.
 
 ## 안전 원칙
 

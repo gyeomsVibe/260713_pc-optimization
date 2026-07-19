@@ -39,8 +39,8 @@
 ## 📂 파일 구성
 - [implementation_plan.md](implementation_plan.md): 최적화 설계 및 추진 계획서
 - [optimization_result.md](optimization_result.md): 전원, 네트워크 튜닝 검증 수치 및 벤치마크 결과 리포트
-- [antigravity-agent-environment.md](antigravity-agent-environment.md): Antigravity IDE 슬리밍 내역 및 최적의 확장 프로그램 상태 기록
-- [claude-agent-environment.md](claude-agent-environment.md): Claude Code의 로컬 스킬 및 권한 설정 상세 가이드
+- [Antigravity 데스크톱 환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/antigravity/environment-desktop.md): Antigravity IDE 슬리밍 내역 및 최적의 확장 프로그램 상태 기록
+- [Claude Code 데스크톱 환경 기록](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization/blob/main/claude/environment-desktop.md): Claude Code의 로컬 스킬 및 권한 설정 상세 가이드
 - `scratch/`: 최적화 관련 로컬 실행 스크립트 및 복구(Rollback) 스크립트 저장소 (아래 복구 경로 참조)
 
 ---
