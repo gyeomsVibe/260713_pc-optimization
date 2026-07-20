@@ -11,6 +11,7 @@ MSI GL75 9SDK 노트북의 발열·성능·개발 도구·AI 에이전트 환경
 | 프로젝트 관리 | 전체 최적화 내역, 적용 결과, 롤백 절차 | [00_Project_Management](00_Project_Management/README.md) |
 | 디스크 최적화 | 저장소 정리와 IDE 경량화 기록 | [01_Disk_Optimization](01_Disk_Optimization/) |
 | 하드웨어 최적화 | GPU·전원·발열 분석 자료 | [02_Hardware_Optimization](02_Hardware_Optimization/) |
+| OS 최적화 | Windows 알림 복구 및 OS 튜닝 기록 | [03_OS_Optimization](03_OS_Optimization/) |
 | 에이전트 환경 | Claude Code·Codex·Antigravity 전용 설정 문서 | [플랫폼 최적화 저장소](https://github.com/gyeomsVibe/260718_agentic-ai-platform-optimization) |
 
 ## AI 에이전트 환경

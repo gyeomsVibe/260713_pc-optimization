@@ -107,6 +107,17 @@ Get-AppxPackage Microsoft.WindowsStore | Remove-AppxPackage
 
 ---
 
+# 🔔 6차 적용: 윈도우 시작 시 알림 자동 비활성화 오류 교정 (2026-07-21)
+
+## 적용 완료 사항
+
+| 영역 | 대상 항목 | 동작 | 최종 적용 상태 |
+| :--- | :--- | :--- | :--- |
+| **OS 복구** | **WPN 알림 DB 재빌드** | `WpnService` 및 사용자 서비스 중지 후 `wpndatabase.db` 초기화 | 기존 DB 백업 및 제거, 서비스 재시작으로 빈 DB 자동 재생성 완료 |
+| **자동 보정** | **로그인 시 알림 강제 활성** | `$env:APPDATA\PC-Maintenance\Fix-WindowsNotifications.ps1` 생성 및 레지스트리 `NOC_GLOBAL_SETTING_TOASTS_ENABLED = 1` 주입 | 사용자 로그인 시 콘솔창이 뜨지 않도록 무창 VBScript 실행기를 윈도우 시작프로그램(`Startup`)에 등록 완료 |
+
+---
+
 ## 🚫 실패 사례 분석 (Failure Cases) 및 해결책 (Solutions)
 
 ### 실패 사례 1: 새로 만들기 메뉴가 복구되지 않고 누락된 이슈
