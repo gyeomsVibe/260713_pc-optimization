@@ -75,9 +75,12 @@ if (-not $isAdmin) {
     $vbsPath = Join-Path $startupFolder "Fix-Notifications-Startup.vbs"
 
     # 콘솔 창 없이 백그라운드로 실행하기 위한 VBScript 내용 생성
+    # VBScript 문자열 안의 큰따옴표는 `""`가 아니라 `""""`로 이스케이프해야 합니다.
+    # 경로에 공백이 있어도 PowerShell의 -File 인수가 한 값으로 유지됩니다.
+    $escapedTargetPath = $targetPath.Replace('"', '""')
     $vbsContent = @"
 Set shell = CreateObject("WScript.Shell")
-shell.Run "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$targetPath`"", 0, False
+shell.Run "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File ""$escapedTargetPath""", 0, False
 "@
 
     try {

@@ -22,3 +22,9 @@
 * **관련 스크립트**:
   - [Fix-WindowsNotifications.ps1](scripts/Fix-WindowsNotifications.ps1): 알림 DB 초기화 및 알림 전역 활성화 레지스트리 적용.
   - [Register-NotificationStartupTask.ps1](scripts/Register-NotificationStartupTask.ps1): 위 조치 스크립트를 로그인 시 백그라운드로 자동 실행되도록 하이브리드 등록 (작업 스케줄러 혹은 시작프로그램 폴더).
+  - [Test-NotificationStartupVbs.ps1](scripts/Test-NotificationStartupVbs.ps1): 시작프로그램 VBScript의 인용 경로 문법을 무해한 명령으로 검증.
+
+### 1-1. 시작프로그램 VBScript 컴파일 오류 교정 (2026-07-21)
+* **관찰 현상**: `Fix-Notifications-Startup.vbs` 실행 시 Windows Script Host 800A0401 컴파일 오류 발생.
+* **근본 원인**: PowerShell `-File` 경로를 감싼 큰따옴표가 VBScript 문자열 안에서 이스케이프되지 않아 문자열이 조기에 종료됨.
+* **교정 및 재발 방지**: 등록 스크립트가 VBScript 규칙에 맞게 큰따옴표를 두 번(`""`) 출력하도록 수정하고, Windows Script Host 파싱 테스트를 추가.
