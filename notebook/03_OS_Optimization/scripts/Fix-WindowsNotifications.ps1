@@ -36,6 +36,24 @@ if ($null -eq $lockValue -or $lockValue.$lockName -ne 1) {
     Write-Host "[+] 잠금 화면 알림 허용 설정을 활성화했습니다." -ForegroundColor Green
 }
 
+# Windows가 실제로 참조하는 전역·잠금 화면 알림 설정도 함께 보정합니다.
+$pushNotificationPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\PushNotifications"
+$toastName = "ToastEnabled"
+$lockScreenName = "LockScreenToastEnabled"
+if (-not (Test-Path $pushNotificationPath)) {
+    New-Item -Path $pushNotificationPath -Force | Out-Null
+}
+$toastValue = Get-ItemProperty -Path $pushNotificationPath -Name $toastName -ErrorAction SilentlyContinue
+if ($null -eq $toastValue -or $toastValue.$toastName -ne 1) {
+    Set-ItemProperty -Path $pushNotificationPath -Name $toastName -Value 1 -Type DWord -Force
+    Write-Host "[+] Windows 전역 알림 값을 활성화했습니다 (ToastEnabled = 1)." -ForegroundColor Green
+}
+$lockScreenValue = Get-ItemProperty -Path $pushNotificationPath -Name $lockScreenName -ErrorAction SilentlyContinue
+if ($null -eq $lockScreenValue -or $lockScreenValue.$lockScreenName -ne 1) {
+    Set-ItemProperty -Path $pushNotificationPath -Name $lockScreenName -Value 1 -Type DWord -Force
+    Write-Host "[+] Windows 잠금 화면 알림 값을 활성화했습니다 (Enabled = 1)." -ForegroundColor Green
+}
+
 # 2. Windows Push Notification Database (WPN DB) 리셋 처리
 if ($ResetDB) {
     Write-Host "[*] Windows Push Notification 데이터베이스 초기화를 진행합니다..." -ForegroundColor Yellow

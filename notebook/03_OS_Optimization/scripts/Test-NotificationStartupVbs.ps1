@@ -7,9 +7,11 @@ param()
 
 $testPath = Join-Path ([System.IO.Path]::GetTempPath()) ("Test-NotificationStartupVbs-{0}.vbs" -f [guid]::NewGuid())
 $targetPath = 'C:\Program Files\PC-Maintenance\Fix-WindowsNotifications.ps1'
+$startupDelayMilliseconds = 1
 $escapedTargetPath = $targetPath.Replace('"', '""')
 $vbsContent = @"
 Set shell = CreateObject("WScript.Shell")
+WScript.Sleep $startupDelayMilliseconds
 shell.Run "cmd.exe /c exit 0 ""$escapedTargetPath""", 0, True
 "@
 
